@@ -1,0 +1,87 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/api/v1/MaterialDesign-Webfont-master/css/materialdesignicons.min.css')
+    style(type='text/css').
+          body {
+            padding: 10px;
+            width: 500px;
+            height: 800px;
+            color: rgb(56, 56, 56);;
+            font-family: arial;
+            font-size: 30px;
+          }
+          .box{
+            padding: 10px;
+            border-radius: 25px 0 25px 0;
+            box-shadow: 10px 10px 25px rgb(56, 56, 56);
+          }
+          /* cover */
+          .cover{
+            background-color: #5e35b1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: -10px;
+            height: 220px;
+            border-radius: 25px 0 25px 0;
+            text-align: center;
+          }
+          .cover-overlay{
+            border-radius: 25px 0 25px 0;
+            background-color: rgba(56, 56, 56, 0.5);
+            width: 100%;
+            height: 220px;
+            display: table; 
+          }
+          .cover-text{
+            display: table-cell; 
+            vertical-align: middle;
+            line-height: 10px;
+            color: white;
+          }
+          .cover-text h1{
+            font-size: 28px;
+          }
+          .cover-text span{
+            font-size: 20px;
+          }
+          /* cover */
+
+          /* conent */
+          .content{
+            height: 500px;
+            font-size: 16px;
+          }
+
+          .content img{
+            display: absolute;
+            right: 0;
+            height: 250px;
+            width: 250px;
+          }
+          i{
+            font-size: 25px;
+          }
+          p{
+            text-align: justify;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+          /* conent */
+
+          .footer{
+            height: 80px;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+          }
+
+          u{
+            font-size: 16px; 
+            word-wrap: break-word; 
+            color: blue;
+          }
+  body
+    block content

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.box
+    div.cover
+      div.cover-overlay
+        div.cover-text
+          span= topString
+          h1= 404
+          span= bottomString
+
+  div.content
+    h1(style={'height': '100%','display': 'flex','justify-content':'center','align-items':'center'})= "Data tidak ditemukan"
+
+  div.footer
+    div(style={width: '70%'})
+      span= 'More info :'
+      br
+      u= footer.url
+
+    div(style={width: '100%', 'padding-top': '5px', 'justify-content': 'end', 'align-items': 'center', display: 'flex'})
+      small= footer.owner

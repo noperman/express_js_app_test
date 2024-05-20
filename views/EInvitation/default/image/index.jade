@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  div.box
+    div(style={'background-image': 'url('+cover.bgCover+')'}).cover
+      div.cover-overlay
+        if (cover.showCoverText)
+          div.cover-text
+            span= cover.topTextCover
+            h1= cover.middleTextCover
+            span= cover.bottomTextCover
+
+  div.content
+    div.content-head
+      if(event.showEventName)
+        h3(style={'margin-top': '1.5em'})= event.name
+      else
+        h3(style={'margin-top': '1.5em'})= ''
+
+      if(event.showEventTime)
+        div(style={width: '100%', display: 'flex', padding: '5px 0 8px 0'})
+          div(style={width: '10%'})
+            i.mdi.mdi-calendar-check-outline
+
+          div(style={width: '85%'})
+            span
+              strong= event.date
+            br
+            span= event.time
+        
+      if(event.showEventAddress)
+        div(style={width: '100%', display: 'flex', padding: '2px 0 2px 0'})
+          div(style={width: '10%'})
+            i.mdi.mdi-map-marker
+
+          div(style={width: '85%'})
+            span= event.address
+
+    div(style={display: 'flex', width: '100%'})
+    
+      if(qrcode.showQRCode)
+        div(style={width: '50%'})
+          p= content.greeting
+          p
+            b= content.to
+          p!= content.message
+      else
+        div(style={width: '100%'})
+          p= content.greeting
+          p
+            b= content.to
+          p!= content.message
+
+
+      if(qrcode.showQRCode)
+        div(style={width: '50%', 'justify-content': 'end', 'align-items': 'center', display: 'flex'})
+          div(style={'text-align': 'center'})
+            img(style={display: 'block'} alt="QRCode" src= qrcode.qrcode)
+            span= qrcode.invitationCode
+
+  div.footer
+    div(style={width: '100%'})
+      if(footer.showEInvitationLink)
+        span= 'More info :'
+        br
+        u= footer.url
+
+    div(style={width: '100%', 'padding-top': '5px', 'justify-content': 'end', 'align-items': 'center', display: 'flex'})
+      small= footer.owner
